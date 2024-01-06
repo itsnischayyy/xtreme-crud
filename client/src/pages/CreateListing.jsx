@@ -7,7 +7,7 @@ export default function CreateListing() {
   const navigate = useNavigate();
   const timestamp = new Date().getTime();
   const [formData, setFormData] = useState({
-    image: "https://source.unsplash.com/random/900x700/?vendor&timestamp=${timestamp}",
+    image: `https://source.unsplash.com/random/900x700/?vendor&timestamp=${timestamp}`,
     vendorName: "",
     contactPerson: "",
     email: "",

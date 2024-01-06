@@ -27,7 +27,7 @@ app.use(cookieParser());
 
 // Use cors middleware to enable CORS
 app.use(cors({
-  origin: ['https://real-estate-spm.netlify.app', 'https://real-estate-nickdl29.vercel.app/', 'https://real-estate-spm.vercel.app', 'https://real-estate-spm.onrender.com'], // Adjust the origin to your frontend URL
+  origin: [''], // Adjust the origin to your frontend URL
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
 }));
