@@ -39,9 +39,18 @@ export default function Search() {
 
   const handleChange = (e) => {
     if (e.target.id === "searchTerm") {
-      setSidebardata({ ...sidebardata, searchTerm: e.target.value });
+      e.preventDefault();
+      const newSearchTerm = e.target.value;
+      setSidebardata({ ...sidebardata, searchTerm: newSearchTerm });
+      
+      const urlParams = new URLSearchParams();
+      urlParams.set("searchTerm", newSearchTerm); // Use the updated searchTerm here
+      
+      const searchQuery = urlParams.toString();
+      navigate(`/search?${searchQuery}`);
     }
   };
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
